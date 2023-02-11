@@ -1,0 +1,6 @@
+@import '/reset.css';
+.container {
+  background-color: #54426B;
+  width: 100%;
+  height: 100%;
+}
