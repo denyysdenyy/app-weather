@@ -4,5 +4,43 @@
     background-color: #54426B;
     width: 100%;
     height: 100%;
-}
-.weat
+};
+.weather{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        max-width: calc(100% - 30%);
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    &-input{
+        max-width: 225px;
+        width: 100%;
+        height: 40px;
+        font-size: 22px;
+        border-radius: 12px;
+        padding: 15px;
+    }
+    &__card{
+        background: #fff;
+        max-width: 300px;
+        width: 100%;
+        height: 225px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &-city{
+        font-size: 26px;
+        letter-spacing: 8px
+    }
+    &-temp{
+        font-size: 32px;
+        font-weight: 800px
+    }
+
+};

@@ -4,3 +4,40 @@
   width: 100%;
   height: 100%;
 }
+
+.weather__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.weather-input {
+  max-width: 225px;
+  width: 100%;
+  height: 40px;
+  font-size: 22px;
+  border-radius: 12px;
+  padding: 15px;
+}
+.weather__card {
+  background: #fff;
+  max-width: 300px;
+  width: 100%;
+  height: 225px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.weather-city {
+  font-size: 26px;
+  letter-spacing: 8px;
+}
+.weather-temp {
+  font-size: 32px;
+  font-weight: 800px;
+}
