@@ -31,11 +31,10 @@
   background-color: #FBF2F2;
 }
 .weather-input:focus {
-  border-radius: 22px;
-  background-color: #54426B;
+  border-radius: 25px;
   opacity: 0.7;
   border: 1px solid #fff;
-  color: #fff;
+  color: #251818;
 }
 .weather-input:focus::placeholder {
   color: #c8bcbc;
