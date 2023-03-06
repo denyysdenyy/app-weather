@@ -1,49 +1,55 @@
 const apiKey = "815fd7dfd7c84ef5863133637231902"
-
-const container = document.querySelector('.container');
-const input = document.querySelector('.weather-input');
 const query = `http://api.weatherapi.com/v1/current.json?key=${apiKey}`;
-let store = {
-    city: 'London',
-    temp: 0,
+
+
+const form = document.getElementById('form');
+const container = document.querySelector('.weather__container');
+const input = document.querySelector('.weather-input');
+
+let info = {
+    city: 'Kiev',
+    temp: 0
 }
 
-// Делаю запрос на получение данных
-const fetchData = async () => {
-    const res = await fetch(`${query}&q=${store.city}`)
-    const data = await res.json()
-    // Деструктуризация
-    const { current:{temp_c: temp, }, location:{name:city}} = data;
-    store = {
-        ...store,
-        city: city,
-        temp: temp
-    };
-    renderData()
+form.addEventListener('submit',formHandler)
 
-    
-};
+function formHandler(e){
+    e.preventDefault();
 
 
-//  Создаю разметку 
-const markup = () => {
-    const {city,temp} = store;
+     const inputText = input.value.trim();
 
-    return `<div class="weather">
-        <div class="weather__container">
-        <input  class="weather-input" type="text">
-        <div class="weather__card">
-            <h3 class="weather-city">London</h3>
-            <p class="weather-temp">4</p>
-        </div>
-        </div>
+    fetch(`${query}&q=${inputText}`).then((data) =>{
+        return data.json();
+    }).then((data) =>{
+        const {current:{temp_c: temp, }, location:{name:city}} = data;
+        info = {
+            ...info,
+            city:city,
+            temp:temp
+        }
+      console.log(info)
+       const markup = function(){
+            return `<form id="form" action="" class="weather-form">
+            <input  class="weather-input" type="text">
+            <button class="weather-btn" type="submit">Поиск</button>
+        </form>
+    <div class="weather__card">
+        <h3 class="weather-city">${city}</h3>
+        <p class="weather-temp">${temp}°C</p>
     </div>`
-};
+       };
+      container.innerHTML = markup();
+
+      
+    });
+    
+    // input.value = '';
+     
 
 
-
-function renderData(){
-    container.innerHTML = markup;
 }
-fetchData();
+
+
+
 
