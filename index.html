@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
     <div class="container">
+    
         <div class="weather">
             <div class="weather__container">
                 <form id="form" action="" class="weather-form">
-                    <input  class="weather-input" type="text">
-                    <button class="weather-btn" type="submit">Поиск</button>
+                    <input  class="weather-input" placeholder="Kharkiv..." type="text">
+                    <button class="weather-btn" type="submit"><svg  class="weather-search" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="weather-search-svg" d="M22.1333 24L13.7333 15.6C13.0667 16.1333 12.3 16.5556 11.4333 16.8667C10.5667 17.1778 9.64444 17.3333 8.66667 17.3333C6.24444 17.3333 4.19467 16.4942 2.51733 14.816C0.84 13.1378 0.000888889 11.088 0 8.66667C0 6.24444 0.839111 4.19467 2.51733 2.51733C4.19556 0.84 6.24533 0.000888889 8.66667 0C11.0889 0 13.1387 0.839111 14.816 2.51733C16.4933 4.19556 17.3324 6.24533 17.3333 8.66667C17.3333 9.64444 17.1778 10.5667 16.8667 11.4333C16.5556 12.3 16.1333 13.0667 15.6 13.7333L24 22.1333L22.1333 24ZM8.66667 14.6667C10.3333 14.6667 11.7502 14.0831 12.9173 12.916C14.0844 11.7489 14.6676 10.3324 14.6667 8.66667C14.6667 7 14.0831 5.58311 12.916 4.416C11.7489 3.24889 10.3324 2.66578 8.66667 2.66667C7 2.66667 5.58311 3.25022 4.416 4.41733C3.24889 5.58444 2.66578 7.00089 2.66667 8.66667C2.66667 10.3333 3.25022 11.7502 4.41733 12.9173C5.58444 14.0844 7.00089 14.6676 8.66667 14.6667Z" fill="#1F6098"/>
+                        </svg></button>
+                    
                 </form>
             <div class="weather__card">
-                <h3 class="weather-city"></h3>
-                <p class="weather-temp"></p>
+                <h3 class="weather-city">London</h3>
+                <span class="weather-icon" > <svg class="weather-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 43V49" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M12.2721 37.7279L8.02945 41.9705" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M7 25H1" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M12.2721 12.2721L8.02945 8.02945" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M25 7V1" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M37.7279 12.2721L41.9705 8.02945" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M43 25H49" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M37.7279 37.7279L41.9705 41.9705" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/><path d="M25 35C30.5228 35 35 30.5228 35 25C35 19.4772 30.5228 15 25 15C19.4772 15 15 19.4772 15 25C15 30.5228 19.4772 35 25 35Z" fill="#FFA500" stroke="#FFA500" stroke-width="2"/></svg></span>
+                <p class="weather-temp">11°C</p>
             </div>
             </div>
         </div>
     </div>
-    <script src="/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
