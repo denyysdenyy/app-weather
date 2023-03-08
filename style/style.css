@@ -81,3 +81,6 @@
 .weather-icon {
   margin-bottom: 25px;
 }
+.weather .night-mod {
+  background-color: #141414;
+}
